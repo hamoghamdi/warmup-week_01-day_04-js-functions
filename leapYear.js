@@ -1,18 +1,17 @@
 const isLeapYear = function (year){
+
     if (typeof(year) != 'number')
         return alert("please only enter numbers");
     else {
-        if (year<0)
+        if (year<=0)
             return alert("year's number unacceptable");
         else {
-            if (year % 4 === 0 && year % 100 === 0 && year % 400 === 0 )
+
+
+            if (year % 4 === 0 && year % 100 === 0 && year % 400 === 0 || year % 4 === 0 && year % 100 != 0)
                 return true;
-            else {
-                if (year%4 ===0 && year%100 != 0)
-                    return true;
-                else
-                    return false;
-                }
+            else 
+                return false;
             }
         }
 }
